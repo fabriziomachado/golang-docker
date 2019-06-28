@@ -12,4 +12,17 @@ $ docker run --rm /
 
 ```sh
 $ docker-compose up
+
+```
+
+### Multi-stage 
+Novo arquivo dockerfile para otimizar a imagem
+
+```sh
+$ docker push fbrz/codeeducation
+$ docker push fbrz/codeeducation:prod
+
+$ docker build -f Dockerfile -t fbrz/codeeducation .
+$ docker build -f Dockerfile.prod -t fbrz/codeeducation:prod .
+$ docker run fbrz/codeeducation:prod
 ```
